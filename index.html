@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Photo Air Brush</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+<div class="container topbar__inner">
+<div class="brand">
+<img src="logo.png" class="brand__logo">
+<span class="brand__name">Photo Air Brush</span>
+</div>
+
+<div class="topbar__actions">
+<button class="btn btn--ghost" id="btnNew">New</button>
+<button class="btn btn--primary" id="btnUpload">Upload</button>
+<input id="fileInput" type="file" accept="image/*" hidden>
+</div>
+</div>
+</header>
+
+<main class="container">
+
+<section class="hero">
+<h1>Image Enhancer Result</h1>
+<p class="muted">Upload photo and compare before & after</p>
+</section>
+
+<section class="card">
+
+<div class="compare__frame">
+<img id="imgAfter" class="compare__img">
+
+<div class="compare__before" id="beforeWrap">
+<img id="imgBefore" class="compare__img">
+</div>
+
+<input id="slider" class="compare__slider" type="range" min="0" max="100" value="50">
+</div>
+
+<div class="side">
+<a class="btn btn--primary" id="downloadEnhanced" download="enhanced.png">Download Enhanced</a>
+<a class="btn btn--ghost" id="downloadOriginal" download="original.png">Download Original</a>
+</div>
+
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
